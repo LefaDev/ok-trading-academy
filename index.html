@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ona Kgoroba Trading Academy | Learn. Trade. Fund.</title>
+    <link rel="icon" type="image/png" href="assets/images/ona-kgoroba-traders-logo.png" />
+    <link rel="preload" as="image" href="assets/images/prop-firm.webp" type="image/webp" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700;800;900&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f4f4f5",
+                        "on-primary-fixed": "#1E1610",
+                        "on-tertiary-fixed-variant": "#D4AF37",
+                        "inverse-primary": "#D4AF37",
+                        "surface-variant": "#2b2017",
+                        "on-surface-variant": "#c5bcae",
+                        "error-container": "#450a0a",
+                        "inverse-surface": "#ffffff",
+                        "secondary": "#996515",
+                        "surface-container-highest": "#312319",
+                        "tertiary-container": "#1E1610",
+                        "tertiary-fixed-dim": "#996515",
+                        "on-error-container": "#f87171",
+                        "surface-tint": "#D4AF37",
+                        "surface": "#1E1610",
+                        "surface-bright": "#2b2017",
+                        "tertiary": "#D4AF37",
+                        "secondary-fixed-dim": "#996515",
+                        "on-primary-container": "#D4AF37",
+                        "primary-fixed-dim": "#D4AF37",
+                        "on-tertiary-fixed": "#D4AF37",
+                        "surface-container-lowest": "#1E1610",
+                        "outline": "#D4AF37",
+                        "on-secondary": "#1E1610",
+                        "on-primary-fixed-variant": "#D4AF37",
+                        "surface-dim": "#1a130e",
+                        "surface-container-high": "#271c14",
+                        "primary-fixed": "#271c14",
+                        "background": "#1E1610",
+                        "on-primary": "#1E1610",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#1d150f",
+                        "on-tertiary-container": "#D4AF37",
+                        "surface-container": "#231912",
+                        "on-secondary-fixed-variant": "#996515",
+                        "on-background": "#ffffff",
+                        "on-secondary-container": "#996515",
+                        "primary": "#D4AF37",
+                        "on-secondary-fixed": "#ffffff",
+                        "on-surface": "#ffffff",
+                        "outline-variant": "#2d2017",
+                        "error": "#ef4444",
+                        "secondary-container": "#271c14",
+                        "primary-container": "#271c14",
+                        "on-tertiary": "#1E1610",
+                        "tertiary-fixed": "#D4AF37",
+                        "secondary-fixed": "#996515"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Cinzel", "serif"],
+                        "label-sm": ["Montserrat", "sans-serif"],
+                        "body-lg": ["Montserrat", "sans-serif"],
+                        "headline-lg-mobile": ["Cinzel", "serif"],
+                        "title-md": ["Montserrat", "sans-serif"],
+                        "display-lg": ["Cinzel", "serif"],
+                        "body-md": ["Montserrat", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-secondary-container">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-[#1E1610]/80 backdrop-blur-md border-b border-[#2d2017] transition-all duration-300">
+        <div class="flex items-center gap-4">
+            <img alt="Ona Kgoroba Logo" class="h-[72px] w-[72px] object-contain"
+                src="assets/images/ona-kgoroba-traders-logo.png" />
+            <span class="font-headline-lg text-lg md:text-xl font-bold text-[#c39e2e] hidden sm:inline">Ona Kgoroba
+                Traders</span>
+        </div>
+        <nav class="hidden lg:flex items-center gap-8">
+            <a class="font-title-md text-title-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors"
+                href="#mentorship">Mentorship</a>
+            <a class="font-title-md text-title-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors"
+                href="#pricing">Pricing</a>
+            <a class="font-title-md text-title-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors"
+                href="#policy">Policy</a>
+            <a class="font-title-md text-title-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors"
+                href="#faq">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <a class="hidden lg:inline-block bg-[#D4AF37] text-[#1E1610] px-6 py-2.5 rounded-full font-title-md text-title-md hover:bg-[#c39e2e] transition-all shadow-sm font-bold"
+                href="#pricing">
+                Apply for Mentorship
+            </a>
+            <button id="menu-toggle"
+                class="lg:hidden text-[#c5bcae] hover:text-[#D4AF37] focus:outline-none flex items-center"
+                aria-label="Toggle Menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-50 bg-[#1E1610] flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-300 lg:hidden">
+        <button id="menu-close" class="absolute top-6 right-6 text-[#c5bcae] hover:text-[#D4AF37] focus:outline-none"
+            aria-label="Close Menu">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <nav class="flex flex-col items-center gap-6 text-xl">
+            <a class="font-title-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors"
+                href="#mentorship">Mentorship</a>
+            <a class="font-title-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors" href="#pricing">Pricing</a>
+            <a class="font-title-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors" href="#policy">Policy</a>
+            <a class="font-title-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors" href="#faq">FAQ</a>
+        </nav>
+        <a class="bg-[#D4AF37] text-[#1E1610] px-8 py-3 rounded-full font-title-md hover:bg-[#c39e2e] transition-all font-bold"
+            href="#pricing">
+            Apply for Mentorship
+        </a>
+    </div>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-[#1E1610] hero-gradient">
+            <!-- Radial glow effects -->
+            <div
+                class="absolute top-1/4 left-1/4 bg-[#D4AF37]/5 blur-[150px] w-96 h-96 rounded-full pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-1/4 bg-[#996515]/5 blur-[150px] w-96 h-96 rounded-full pointer-events-none">
+            </div>
+
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-[#1E1610]"></div>
+            </div>
+            <div
+                class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col gap-6 pt-10 md:pt-0 lg:pt-0">
+                    <div class="flex flex-col gap-2">
+                        <h5 class="text-[#D4AF37] text-xs md:text-sm font-semibold tracking-wider uppercase">Empowering
+                            Modern Traders</h5>
+                        <h1
+                            class="font-display-lg text-4xl md:text-[44px] lg:text-[56px] text-white font-bold tracking-tight max-w-xl leading-none">
+                            Learn. <span class="text-gradient">Trade.</span> Fund.
+                        </h1>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-[#c5bcae] max-w-lg">
+                        Bridge the gap between theory and real profitability. Join a disciplined mentorship program
+                        designed to take you from a student to a funded professional trader.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a class="w-full sm:w-auto text-center bg-[#D4AF37] text-[#1E1610] px-8 py-3.5 rounded-full font-title-md text-title-md shadow-xl shadow-[#D4AF37]/10 hover:bg-white hover:text-black hover:scale-[1.02] transition-all font-bold"
+                            href="#pricing">
+                            Apply for Mentorship
+                        </a>
+                        <a class="w-full sm:w-auto text-center border border-[#996515] text-[#D4AF37] px-8 py-3.5 rounded-full font-title-md text-title-md hover:bg-[#996515]/10 hover:scale-[1.02] transition-all"
+                            href="https://wa.me/27670243027?text=Hi!%20I%20would%20like%20to%20join%20the%20OK%20Trading%20Community.">
+                            Join Community
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="relative mt-16 lg:mt-0 max-w-md md:max-w-lg lg:max-w-none mx-auto lg:mx-0 w-full mb-8 lg:mb-0">
+                    <div class="glass-card p-4 rounded-xl rotate-3 scale-105 shadow-2xl">
+                        <img alt="Market Analysis Preview"
+                            class="rounded-lg w-full h-[320px] object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                            src="assets/images/prop-firm.webp" fetchpriority="high" decoding="sync" />
+                    </div>
+                    <div
+                        class="absolute -bottom-6 left-4 md:-bottom-8 md:-left-6 lg:-bottom-10 lg:-left-10 glass-card p-6 rounded-xl -rotate-6 shadow-xl animate-bounce-slow border border-[#D4AF37]/10">
+                        <p class="text-[#D4AF37] text-xs font-semibold tracking-wider uppercase">PROFIT TARGET</p>
+                        <p class="font-headline-lg text-2xl md:text-3xl text-white font-bold">$10,000.00</p>
+                        <div class="w-full bg-[#2d2017] h-1.5 mt-2 rounded-full overflow-hidden">
+                            <div class="bg-[#D4AF37] w-[67%] h-full rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats/Trust Bar -->
+        <div class="bg-[#1E1610]/40 border-y border-[#2d2017] py-8 overflow-hidden">
+            <div
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-white">
+                <div class="flex flex-col md:flex-row items-center text-center md:text-left gap-4">
+                    <span class="material-symbols-outlined text-[#D4AF37] text-4xl">verified_user</span>
+                    <div>
+                        <p class="font-title-md text-title-md font-semibold text-white">Exness Partner</p>
+                        <p class="font-label-sm text-label-sm text-[#c5bcae]">Official Affiliation</p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row items-center text-center md:text-left gap-4 lg:border-l lg:border-[#2d2017] lg:pl-8">
+                    <span class="material-symbols-outlined text-[#D4AF37] text-4xl">groups</span>
+                    <div>
+                        <p class="font-title-md text-title-md font-semibold text-white">12-Month Support</p>
+                        <p class="font-label-sm text-label-sm text-[#c5bcae]">Guided Growth</p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row items-center text-center md:text-left gap-4 lg:border-l lg:border-[#2d2017] lg:pl-8">
+                    <span class="material-symbols-outlined text-[#D4AF37] text-4xl">trending_up</span>
+                    <div>
+                        <p class="font-title-md text-title-md font-semibold text-white">Prop Firm Strategy</p>
+                        <p class="font-label-sm text-label-sm text-[#c5bcae]">Passing Focused</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Onalenna Section -->
+        <section class="py-24 bg-[#1E1610] relative overflow-hidden" id="about">
+            <div
+                class="absolute top-1/2 right-0 bg-[#D4AF37]/5 blur-[120px] w-96 h-96 rounded-full pointer-events-none">
+            </div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1 flex justify-center">
+                        <div class="relative w-full max-w-sm">
+                            <img alt="Onalenna Kgoroba Portrait"
+                                class="rounded-xl shadow-2xl relative z-10 w-full aspect-[4/5] object-cover"
+                                src="assets/images/7.jpeg" />
+                            <div
+                                class="absolute -inset-4 bg-gradient-to-tr from-[#D4AF37] to-[#996515] opacity-20 blur-md -z-0 rounded-xl translate-x-2 translate-y-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 flex flex-col gap-6">
+                        <div class="flex flex-col gap-2">
+                            <h5 class="text-[#D4AF37] text-xs md:text-sm font-semibold tracking-wider uppercase">The
+                                Founder</h5>
+                            <h3
+                                class="font-display-lg text-2xl md:text-[26px] lg:text-[28px] text-white font-bold tracking-tight leading-tight">
+                                Onalenna Kgoroba</h3>
+                            <div class="w-16 h-1 bg-gradient-to-r from-[#D4AF37] to-[#996515] mt-3"></div>
+                        </div>
+                        <p class="font-body-lg text-body-lg text-[#c5bcae]">
+                            An Exness-affiliated trader with over 3 years of battle-tested experience in the global
+                            markets. Onalenna has transitioned from individual trading to mentoring hundreds of students
+                            across South Africa.
+                        </p>
+                        <p class="font-body-lg text-body-lg text-[#c5bcae]">
+                            The academy's focus isn't just on signals; it's about the <strong>Prop Firm Path</strong>.
+                            We teach the practical skills needed to secure large-scale funding and maintain it through
+                            disciplined risk management.
+                        </p>
+                        <div class="flex gap-12 mt-4">
+                            <div>
+                                <p
+                                    class="font-headline-lg text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-[#D4AF37] to-[#996515] bg-clip-text text-transparent">
+                                    3+</p>
+                                <p class="text-[#c5bcae] text-xs tracking-wider uppercase font-semibold">Years
+                                    Experience</p>
+                            </div>
+                            <div>
+                                <p
+                                    class="font-headline-lg text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-[#D4AF37] to-[#996515] bg-clip-text text-transparent">
+                                    20+</p>
+                                <p class="text-[#c5bcae] text-xs tracking-wider uppercase font-semibold">Students
+                                    Mentored</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- What You Get Section - Bento Style -->
+        <section class="py-24 bg-[#1E1610] relative overflow-hidden" id="mentorship">
+            <div
+                class="absolute top-1/2 left-1/4 bg-[#996515]/5 blur-[120px] w-96 h-96 rounded-full pointer-events-none">
+            </div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <h5 class="text-[#D4AF37] text-xs md:text-sm font-semibold tracking-wider uppercase">Mentorship
+                        Blueprint</h5>
+                    <h2
+                        class="font-display-lg text-3xl md:text-[36px] lg:text-[40px] text-white font-bold tracking-tight mt-2">
+                        What
+                        You Receive</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    <!-- Feature 1 -->
+                    <div
+                        class="md:col-span-2 glass-card p-8 flex flex-col gap-6 group hover:border-[#D4AF37]/50 transition-all duration-300">
+                        <div class="flex justify-between items-center">
+                            <span class="material-symbols-outlined text-4xl text-[#D4AF37]">calendar_month</span>
+                            <span
+                                class="font-label-sm text-label-sm border border-[#2d2017] text-[#c5bcae] px-3 py-1 rounded-full group-hover:border-[#D4AF37] group-hover:text-white transition-colors">Long-Term
+                                Growth</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h4
+                                class="font-display-lg text-lg md:text-[18px] lg:text-[20px] text-white font-bold tracking-tight">
+                                12-Month Structured Mentorship</h4>
+                            <p class="font-body-md text-body-md text-[#c5bcae]">Full access to our learning portal,
+                                strategy
+                                guides, and continuous coaching for an entire year. No rushing the process.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="glass-card p-8 flex flex-col gap-6 group hover:border-[#D4AF37]/50 transition-all">
+                        <span class="material-symbols-outlined text-4xl text-[#D4AF37] self-start">live_tv</span>
+                        <div class="flex flex-col gap-2">
+                            <h4
+                                class="font-display-lg text-lg md:text-[18px] lg:text-[20px] text-white font-bold tracking-tight">
+                                Daily
+                                Live Sessions</h4>
+                            <p class="font-body-md text-body-md text-[#c5bcae]">Live market reviews where we
+                                break down setups in real-time. Watch the analysis unfold before placing trades.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="glass-card p-8 flex flex-col gap-6 group hover:border-[#D4AF37]/50 transition-all">
+                        <span
+                            class="material-symbols-outlined text-4xl text-[#D4AF37] self-start">signal_cellular_alt</span>
+                        <div class="flex flex-col gap-2">
+                            <h4
+                                class="font-display-lg text-lg md:text-[18px] lg:text-[20px] text-white font-bold tracking-tight">
+                                Gold
+                                &amp; Bitcoin Signals</h4>
+                            <p class="font-body-md text-body-md text-[#c5bcae]">4 months of high-precision
+                                trading signals to help capitalize on market moves while you learn the strategy.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div
+                        class="md:col-span-2 glass-card p-8 flex flex-col gap-6 group hover:border-[#D4AF37]/50 transition-all duration-300">
+                        <span
+                            class="material-symbols-outlined text-4xl text-[#D4AF37] self-start">account_balance_wallet</span>
+                        <div class="flex flex-col gap-2">
+                            <h4
+                                class="font-display-lg text-lg md:text-[18px] lg:text-[20px] text-white font-bold tracking-tight">
+                                Prop
+                                Firm Mastery Strategy</h4>
+                            <p class="font-body-md text-body-md text-[#c5bcae]">The core of our curriculum:
+                                specific risk-to-reward frameworks designed to pass 10k, 50k, and 100k account
+                                challenges without blowing your drawdown.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Section -->
+        <section class="py-24 bg-[#1a130e] relative overflow-hidden border-t border-[#2d2017]" id="pricing">
+            <div
+                class="absolute bottom-10 right-10 bg-[#D4AF37]/5 blur-[120px] w-96 h-96 rounded-full pointer-events-none">
+            </div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <h5 class="text-[#D4AF37] text-xs md:text-sm font-semibold tracking-wider uppercase">Invest in
+                        Yourself</h5>
+                    <h2
+                        class="font-display-lg text-3xl md:text-[36px] lg:text-[40px] text-white font-bold tracking-tight mt-2">
+                        Transparent Pricing</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <!-- Basic Plan -->
+                    <div
+                        class="glass-card p-8 flex flex-col gap-6 border-t border-[#2d2017] hover:border-[#D4AF37]/50 transition-all">
+                        <div class="flex flex-col gap-2">
+                            <h3
+                                class="font-display-lg text-2xl md:text-[26px] lg:text-[28px] text-white font-bold tracking-tight">
+                                Membership</h3>
+                            <p class="font-body-md text-body-md text-[#c5bcae]">Full entry to the academy ecosystem.</p>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="font-display-lg text-4xl md:text-5xl text-white font-bold">R5,000</span>
+                            <span class="font-body-md text-body-md text-[#c5bcae]">Once-off</span>
+                        </div>
+                        <ul class="flex flex-col gap-4 flex-grow my-2">
+                            <li class="flex items-center gap-3 font-body-md text-zinc-200"><span
+                                    class="material-symbols-outlined text-[#D4AF37]">check_circle</span> 12-Month
+                                Mentorship</li>
+                            <li class="flex items-center gap-3 font-body-md text-zinc-200"><span
+                                    class="material-symbols-outlined text-[#D4AF37]">check_circle</span> Student
+                                Community Access</li>
+                            <li class="flex items-center gap-3 font-body-md text-zinc-200"><span
+                                    class="material-symbols-outlined text-[#D4AF37]">check_circle</span> Core Strategy
+                                Modules</li>
+                            <li class="flex items-center gap-3 font-body-md text-zinc-200"><span
+                                    class="material-symbols-outlined text-[#D4AF37]">check_circle</span> Trading Signals
+                                (4 Months)</li>
+                        </ul>
+                        <a class="border border-[#996515] text-[#D4AF37] text-center py-4 rounded-full font-title-md hover:bg-[#996515]/10 transition-all font-semibold"
+                            href="https://wa.me/27670243027?text=Hi!%20I%20would%20like%20to%20enroll%20for%20the%20R5k%20Academy%20Plan.">Get
+                            Started</a>
+                    </div>
+                    <!-- 1-on-1 Plan -->
+                    <div
+                        class="glass-card p-8 border-t-2 border-[#D4AF37]/50 flex flex-col gap-6 relative overflow-hidden shadow-2xl shadow-[#D4AF37]/5 hover:border-[#D4AF37] transition-all">
+                        <div
+                            class="absolute top-8 -right-8 bg-gradient-to-r from-[#D4AF37] to-[#996515] text-white px-12 py-1 rotate-45 text-[10px] font-bold tracking-widest uppercase">
+                            ELITE</div>
+                        <div class="flex flex-col gap-2">
+                            <h3
+                                class="font-display-lg text-2xl md:text-[26px] lg:text-[28px] text-white font-bold tracking-tight">
+                                1-on-1 Coaching</h3>
+                            <p class="font-body-md text-body-md text-[#c5bcae]">Personalized fast-track mentorship.</p>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="font-display-lg text-4xl md:text-5xl text-[#D4AF37] font-bold">R8,000</span>
+                            <span class="font-body-md text-body-md text-[#c5bcae]">Once-off</span>
+                        </div>
+                        <ul class="flex flex-col gap-4 flex-grow my-2">
+                            <li class="flex items-center gap-3 font-body-md text-zinc-200"><span
+                                    class="material-symbols-outlined text-[#D4AF37]">stars</span> Everything in
+                                Membership</li>
+                            <li class="flex items-center gap-3 font-body-md text-zinc-200"><span
+                                    class="material-symbols-outlined text-[#D4AF37]">stars</span> Personalized 1-on-1
+                                Sessions</li>
+                            <li class="flex items-center gap-3 font-body-md text-zinc-200"><span
+                                    class="material-symbols-outlined text-[#D4AF37]">stars</span> Advanced Account
+                                Scaling</li>
+                            <li class="flex items-center gap-3 font-body-md text-zinc-200"><span
+                                    class="material-symbols-outlined text-[#D4AF37]">stars</span> Direct Priority
+                                Support</li>
+                        </ul>
+                        <a class="bg-[#D4AF37] text-[#1E1610] text-center py-4 rounded-full font-title-md hover:bg-[#c39e2e] transition-all shadow-lg shadow-white/5 font-bold"
+                            href="https://wa.me/27670243027?text=Hi!%20I%20would%20like%20to%20enroll%20for%20the%20R8k%201-on-1%20Coaching%20Plan.">Enroll
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mentorship Policy -->
+        <section class="py-24 bg-[#1E1610] border-t border-[#2d2017]" id="policy">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <h5 class="text-[#D4AF37] text-xs md:text-sm font-semibold tracking-wider uppercase">Transparency
+                        &amp; Trust</h5>
+                    <h2
+                        class="font-display-lg text-3xl md:text-[36px] lg:text-[40px] text-white font-bold tracking-tight mt-2">
+                        Mentorship Policy</h2>
+                </div>
+                <div class="max-w-2xl mx-auto glass-card border border-[#2d2017] p-6 sm:p-10 text-left">
+                    <p class="font-body-lg text-body-lg text-[#c5bcae] mb-6 opacity-90 font-semibold text-[#D4AF37]">
+                        Official Mentorship Policy Statement (Ona Kgoroba Traders)
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-[#D4AF37] shrink-0">payments</span>
+                            <div>
+                                <p class="font-semibold text-white">Payment Terms &amp; Installments</p>
+                                <p class="font-body-md text-[#c5bcae] mt-1">As Ona Kgoroba Traders, we accept monthly
+                                    payment instalments strictly for serious and committed clients only. A deposit is
+                                    mandatory and must be paid before any mentorship session commences. This allows
+                                    enrollments for individuals who are unable to pay the full amount all at once.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-[#D4AF37] shrink-0">cancel</span>
+                            <div>
+                                <p class="font-semibold text-white">Non-Refundable Policy</p>
+                                <p class="font-body-md text-[#c5bcae] mt-1">All payments are non-refundable. Once a
+                                    client has joined the mentorship program, there is no reversal or cancellation. This
+                                    is due to the fact that time, expertise, resources, and proprietary knowledge would
+                                    have already been invested in the client.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-[#D4AF37] shrink-0">workspace_premium</span>
+                            <div>
+                                <p class="font-semibold text-white">Mentorship Responsibility &amp; Commitment</p>
+                                <p class="font-body-md text-[#c5bcae] mt-1">Once you become my client or student, you
+                                    become my professional responsibility. I am fully committed to ensuring that you
+                                    understand, master, and apply financial market trading skills (Forex) with the goal
+                                    of becoming consistently profitable within a period of up to 12 months, provided the
+                                    client follows the mentorship structure with discipline and commitment.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-[#D4AF37] shrink-0">meeting_room</span>
+                            <div>
+                                <p class="font-semibold text-white">One-on-One Mentorship Sessions</p>
+                                <p class="font-body-md text-[#c5bcae] mt-1">All one-on-one mentorship sessions are
+                                    conducted in public and professional environments, including and not limited to
+                                    restaurants, parks, and libraries.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-[#D4AF37] shrink-0">notifications_active</span>
+                            <div>
+                                <p class="font-semibold text-white">Trading Signals Policy</p>
+                                <p class="font-body-md text-[#c5bcae] mt-1">Ona Kgoroba Traders provides trading signals
+                                    exclusively to active mentorship clients. Signals are not offered outside of the
+                                    mentorship program.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="py-24 bg-[#1a130e] border-t border-[#2d2017]" id="faq">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <h5 class="text-[#D4AF37] text-xs md:text-sm font-semibold tracking-wider uppercase">Got Questions?
+                    </h5>
+                    <h2
+                        class="font-display-lg text-3xl md:text-[36px] lg:text-[40px] text-white font-bold tracking-tight mt-2">
+                        Frequently Asked Questions</h2>
+                </div>
+                <div class="max-w-3xl mx-auto flex flex-col gap-4">
+                    <!-- FAQ 1 -->
+                    <details class="glass-card p-6 group cursor-pointer hover:border-[#D4AF37]/50 transition-all"
+                        open="">
+                        <summary
+                            class="font-title-md text-title-md text-white flex justify-between items-center list-none font-semibold">
+                            What are the payment terms and installment options?
+                            <span
+                                class="material-symbols-outlined text-[#D4AF37] group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="font-body-md text-body-md text-[#c5bcae] mt-4">
+                            As Ona Kgoroba Traders, we accept monthly payment instalments strictly for serious and
+                            committed clients only. A deposit is mandatory and must be paid before any mentorship
+                            session commences. Enrollments are allowed for individuals who are able to make monthly
+                            payments due to not being able to pay the full amount all at once.
+                        </p>
+                    </details>
+                    <!-- FAQ 2 -->
+                    <details class="glass-card p-6 group cursor-pointer hover:border-[#D4AF37]/50 transition-all">
+                        <summary
+                            class="font-title-md text-title-md text-white flex justify-between items-center list-none font-semibold">
+                            What is the refund and cancellation policy?
+                            <span
+                                class="material-symbols-outlined text-[#D4AF37] group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="font-body-md text-body-md text-[#c5bcae] mt-4">
+                            All payments are non-refundable. Once a client has joined the mentorship program, there is
+                            no reversal or cancellation. This is due to the fact that time, expertise, resources, and
+                            proprietary knowledge would have already been invested in the client from day one.
+                        </p>
+                    </details>
+                    <!-- FAQ 3 -->
+                    <details class="glass-card p-6 group cursor-pointer hover:border-[#D4AF37]/50 transition-all">
+                        <summary
+                            class="font-title-md text-title-md text-white flex justify-between items-center list-none font-semibold">
+                            What is the commitment of the academy and the student?
+                            <span
+                                class="material-symbols-outlined text-[#D4AF37] group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="font-body-md text-body-md text-[#c5bcae] mt-4">
+                            Once you become my client or student, you become my professional responsibility. I am fully
+                            committed to ensuring that you understand, master, and apply financial market trading skills
+                            (Forex) with the goal of becoming consistently profitable within a period of up to 12
+                            months, provided the client follows the mentorship structure with discipline and commitment.
+                        </p>
+                    </details>
+                    <!-- FAQ 4 -->
+                    <details class="glass-card p-6 group cursor-pointer hover:border-[#D4AF37]/50 transition-all">
+                        <summary
+                            class="font-title-md text-title-md text-white flex justify-between items-center list-none font-semibold">
+                            Where are the one-on-one mentorship sessions conducted?
+                            <span
+                                class="material-symbols-outlined text-[#D4AF37] group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="font-body-md text-body-md text-[#c5bcae] mt-4">
+                            All one-on-one mentorship sessions are conducted in public and professional environments,
+                            including and not limited to restaurants, parks, and libraries.
+                        </p>
+                    </details>
+                    <!-- FAQ 5 -->
+                    <details class="glass-card p-6 group cursor-pointer hover:border-[#D4AF37]/50 transition-all">
+                        <summary
+                            class="font-title-md text-title-md text-white flex justify-between items-center list-none font-semibold">
+                            Are trading signals available outside of the mentorship?
+                            <span
+                                class="material-symbols-outlined text-[#D4AF37] group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="font-body-md text-body-md text-[#c5bcae] mt-4">
+                            No. Ona Kgoroba Traders provides trading signals exclusively to active mentorship clients.
+                            Signals are not offered outside of the mentorship program.
+                        </p>
+                    </details>
+                    <!-- FAQ 6 -->
+                    <details class="glass-card p-6 group cursor-pointer hover:border-[#D4AF37]/50 transition-all">
+                        <summary
+                            class="font-title-md text-title-md text-white flex justify-between items-center list-none font-semibold">
+                            Do I need a large capital to start?
+                            <span
+                                class="material-symbols-outlined text-[#D4AF37] group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="font-body-md text-body-md text-[#c5bcae] mt-4">
+                            No. We focus on teaching you how to use Prop Firms. This means you can trade accounts from
+                            $10,000 to $100,000 with very small capital costs for the challenges.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer
+        class="w-full py-16 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 bg-[#1E1610] border-t border-[#2d2017]">
+        <div class="flex flex-col items-center md:items-start gap-4">
+            <div class="flex items-center gap-3">
+                <img alt="Ona Kgoroba" class="h-[72px] w-[72px]" src="assets/images/ona-kgoroba-traders-logo.png" />
+                <span class="font-headline-lg-mobile text-lg font-bold tracking-tight text-[#c39e2e]">Ona Kgoroba
+                    Traders</span>
+            </div>
+            <p class="font-body-md text-body-md text-[#c5bcae] text-center md:text-left max-w-xs">
+                © 2026 Ona Kgoroba Traders. Focus. Plan. Execute.
+            </p>
+        </div>
+        <div class="flex flex-col items-center md:items-end gap-6">
+            <div class="flex gap-6">
+                <a class="font-body-md text-body-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors"
+                    href="#policy">Mentorship Policy</a>
+                <a class="font-body-md text-body-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-body-md text-body-md text-[#c5bcae] hover:text-[#D4AF37] transition-colors"
+                    href="#">Contact</a>
+            </div>
+            <div class="flex gap-4">
+                <a class="border border-[#2d2017] text-[#c5bcae] p-3 rounded-full hover:border-[#D4AF37] hover:text-white transition-all shadow-md"
+                    href="https://wa.me/27670243027?text=Hi!%20I%27d%20like%20to%20inquire%20about%20OK%20Trading%20Academy."
+                    aria-label="WhatsApp">
+                    <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.143c1.589.943 3.385 1.44 5.216 1.441 5.499 0 9.981-4.482 9.984-9.981.002-2.664-1.037-5.168-2.925-7.056-1.889-1.888-4.391-2.927-7.058-2.928-5.5 0-9.982 4.483-9.985 9.981 0 1.835.503 3.626 1.456 5.216l-1.012 3.705 3.805-1.001h-.001z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="border border-[#2d2017] text-[#c5bcae] p-3 rounded-full hover:border-[#D4AF37] hover:text-white transition-all shadow-md"
+                    href="#" aria-label="Instagram">
+                    <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="border border-[#2d2017] text-[#c5bcae] p-3 rounded-full hover:border-[#D4AF37] hover:text-white transition-all shadow-md"
+                    href="https://www.facebook.com/profile.php?id=61567112789598" aria-label="Facebook">
+                    <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                        <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="border border-[#2d2017] text-[#c5bcae] p-3 rounded-full hover:border-[#D4AF37] hover:text-white transition-all shadow-md"
+                    href="#" aria-label="TikTok">
+                    <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                        <path
+                            d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.52-4.06-1.37-.28-.2-.53-.43-.77-.68v6.52c.07 2.14-.88 4.3-2.73 5.42-1.9 1.18-4.47 1.25-6.42.17-1.97-1.07-3.15-3.32-3.1-5.59.03-2.18 1.13-4.3 3-5.38 1.7-1.01 3.91-1.12 5.71-.24v4.02c-.89-.44-1.94-.48-2.85-.05-.96.44-1.58 1.44-1.6 2.5-.03 1.05.57 2.05 1.51 2.51.98.48 2.17.43 3.1-.13.89-.53 1.41-1.54 1.38-2.58V0c-.86.02-1.72.02-2.58.02z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
